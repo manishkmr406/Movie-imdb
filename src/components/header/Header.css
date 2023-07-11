@@ -11,6 +11,37 @@
     align-items: center;
 
 }
+.search-input{
+    width: 220px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+.search::placeholder {
+    color: white;
+}
+
+.search:focus {
+    background-color: #22254b;
+    outline: none;
+}
+.search-container{
+    /* display: inline-block; */
+    position: relative;
+    color: #fff;
+}
+.search-container .fa-solid{
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left: auto; 
+    right: 20px;
+    cursor: pointer;
+}
 
 a > span{
     margin: 0 30px;
