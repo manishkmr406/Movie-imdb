@@ -5,23 +5,18 @@ import Home from './pages/home/home';
 import MovieList from './components/movieList/movieList';
 import MovieDetail from './pages/movieDetail/movieDetail';
 import Search from './components/search/search';
-import { useState } from 'react';
 
 function App() {
-  const [searchInput,setSearchInput]= useState(" ");
 
-    const handleSearchInput=(e)=>{
-        setSearchInput(e.target.value);
-    }
   return (
     <div className="App">
       <Router>
-          <Header handleSearchInput={handleSearchInput} searchInput={searchInput}/>
+          <Header />
             <Routes>
                 <Route index element={<Home />}></Route>
                 <Route path="movie/:id" element={<MovieDetail />}></Route>
                 <Route path="movies/:type" element={<MovieList />}></Route>
-                <Route path="movies/search" element={<Search searchInput={searchInput}/>}></Route>
+                <Route path="/:searchInput" element={<Search />}></Route>
                 <Route path="/*" element={<h1>Error Page</h1>}></Route>
             </Routes>
         </Router>

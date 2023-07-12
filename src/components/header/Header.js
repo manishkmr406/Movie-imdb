@@ -2,7 +2,12 @@ import React, { useState } from "react"
 import "./Header.css"
 import { Link } from "react-router-dom"
 
-const Header = ({handleSearchInput,searchInput}) => {
+const Header = () => {
+    const [searchInput,setSearchInput]= useState("");
+
+    const handleSearchInput=(e)=>{
+        setSearchInput(e.target.value);
+    }
     
     return (
         <div className="header">
@@ -15,7 +20,7 @@ const Header = ({handleSearchInput,searchInput}) => {
             <div className="headerRight">
             <div className="search-container">
             <input className="search-input" type="text" value={searchInput} placeholder="Search Movie" onChange={handleSearchInput}/>
-            <Link to={`/movies/search`} style={{textDecoration: "none",color: 'white'}}><i className="fa-solid fa-magnifying-glass"></i></Link>
+            <Link to={`/${searchInput}`} style={{textDecoration: "none",color: 'white'}}><i className="fa-solid fa-magnifying-glass"></i></Link>
             </div>
             </div>
         </div>
