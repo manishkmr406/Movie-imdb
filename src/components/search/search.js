@@ -17,11 +17,13 @@ const Search = () => {
     },[searchInput])
     console.log(searchResults);
     return (
-    <div>
+    <div className='search-container'>
     <h1>Results Found: {searchResults.length}</h1>
+    <div>
     {searchResults.length>0 ? (searchResults.map(((movie,i)=>(
         <Cards movie={movie} key={i}/>
     ))) ): (<h1> No Results Found!</h1>)}
+    </div>
     </div>
   )
 }

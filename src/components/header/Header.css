@@ -65,17 +65,26 @@ a > span:hover {
 
 @media screen and (max-width: 500px) {
     .header{
-        margin: 0.5rem;
+        margin: 0 0.5rem;
+    }
+    .header__icon{
+        width: 60px;
     }
     .headerLeft{
-        flex-direction: column;
-        gap: 5px;
         text-align: center;
     }
+    a > span{
+        font-size: 0.8rem;
+        margin: 0 15px;
+    }
     .search-input{
-        width: 180px;
+        width: 110px;
     }
     .search-container{
         margin-right: 20px;
     }
+    .search::placeholder{
+        display: none;
+    }
 }
+
