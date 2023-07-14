@@ -83,8 +83,5 @@ a > span:hover {
     .search-container{
         margin-right: 20px;
     }
-    .search::placeholder{
-        display: none;
-    }
 }
 

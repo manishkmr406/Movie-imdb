@@ -1,6 +1,12 @@
-.search-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.searchInput_container{
+  padding: 0 3rem 3rem 3rem;
 }
-
+.search_title{
+  font-size: 1.75rem;
+  margin:  2.5rem;
+}
+.search_list{
+  display: flex;
+  flex-wrap: wrap ;
+  justify-content: center;
+}

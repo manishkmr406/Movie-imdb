@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "./search.css";
 import Cards from '../card/card';
 import { useParams } from 'react-router-dom';
 
@@ -17,9 +18,9 @@ const Search = () => {
     },[searchInput])
     console.log(searchResults);
     return (
-    <div className='search-container'>
-    <h1>Results Found: {searchResults.length}</h1>
-    <div>
+    <div className='searchInput_container'>
+    <h1 className='search_title'>Results Found: {searchResults.length}</h1>
+    <div className='search_list'>
     {searchResults.length>0 ? (searchResults.map(((movie,i)=>(
         <Cards movie={movie} key={i}/>
     ))) ): (<h1> No Results Found!</h1>)}
